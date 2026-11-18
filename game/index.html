@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#081019">
+    <title>NULL VECTOR: The Last Relay</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="stage">
+      <div class="frame" id="frame">
+        <canvas id="field" aria-label="NULL VECTOR game field"></canvas>
+        <section class="overlay" id="titleOverlay" aria-labelledby="titleHeading">
+          <div class="card title-card">
+            <p class="eyebrow"><i></i> RELAY DEFENSE · SECTOR 08</p>
+            <h1 id="titleHeading">NULL<br><span>VECTOR</span></h1>
+            <p class="subtitle">THE LAST RELAY</p>
+            <p class="copy">The signal is being eaten from the outside in. Hold the ring, harvest charge, and break the breach before the core goes dark.</p>
+            <div class="feature-row"><span>8 WAVES</span><span>2 BREACH BOSSES</span><span>12 MODULES</span></div>
+            <button class="primary" id="startButton">ENTER THE BREACH <b>↗</b></button>
+            <p class="controls-note"><kbd>W A S D</kbd> move · <kbd>LMB</kbd> arc fire · <kbd>Q</kbd> flux mode<br><kbd>E</kbd> nova · <kbd>F</kbd> patch core · <kbd>SPACE</kbd> dash · <kbd>P</kbd> pause</p>
+          </div>
+        </section>
+        <section class="overlay hidden" id="upgradeOverlay" aria-labelledby="upgradeTitle">
+          <div class="card upgrade-card">
+            <p class="eyebrow"><i></i> WAVE SECURED · SCRAP BANKED</p>
+            <h2 id="upgradeTitle">CHOOSE A MODULE</h2>
+            <p class="copy">Tune the relay before the next breach. The field is paused while you choose.</p>
+            <div class="upgrade-grid" id="upgradeGrid"></div>
+            <p class="controls-note">Press <kbd>1</kbd> <kbd>2</kbd> or <kbd>3</kbd> to slot a module</p>
+          </div>
+        </section>
+        <section class="overlay hidden" id="pauseOverlay" aria-labelledby="pauseTitle">
+          <div class="card pause-card">
+            <p class="eyebrow"><i></i> SIGNAL HELD</p>
+            <h2 id="pauseTitle">PAUSED</h2>
+            <p class="copy">The breach waits. The relay does not.</p>
+            <button class="primary" id="resumeButton">RESUME <b>P</b></button>
+          </div>
+        </section>
+        <section class="overlay hidden" id="resultOverlay" aria-labelledby="resultTitle">
+          <div class="card result-card">
+            <p class="eyebrow" id="resultKicker"><i></i> SIGNAL REPORT</p>
+            <h2 id="resultTitle">RELAY HELD</h2>
+            <p class="copy" id="resultCopy"></p>
+            <div class="result-stats"><span><small>SCORE</small><b id="resultScore">000000</b></span><span><small>WAVE</small><b id="resultWave">00 / 08</b></span><span><small>BEST CHAIN</small><b id="resultChain">×0</b></span></div>
+            <button class="primary" id="restartButton">RUN THE SIGNAL AGAIN <b>↻</b></button>
+            <p class="controls-note">Press <kbd>R</kbd> to restart</p>
+          </div>
+        </section>
+        <div class="sr-only" id="announcement" aria-live="polite"></div>
+      </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

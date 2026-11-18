@@ -1,0 +1,4 @@
+work/
+.makefun/
+node_modules/
+*.log

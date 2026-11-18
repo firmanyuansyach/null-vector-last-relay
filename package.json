@@ -1,0 +1,8 @@
+{
+  "name": "null-vector-last-relay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node serve.mjs"
+  }
+}
